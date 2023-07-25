@@ -87,3 +87,10 @@ long_str[:10] # output: ' Data Stru'
 "Data" in long_str # output: True
 'struct' in long_str # output: False
 "bool" in long_str # output: True
+
+
+##########################################
+# String methods
+##########################################
+# identify methods that belong to a specific ds
+dir(int)
