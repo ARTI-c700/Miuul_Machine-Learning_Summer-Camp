@@ -269,6 +269,5 @@ dictionary.items()
 dictionary.update({"REG": 111}) # Existing key
 dictionary.update({"ALM": [77, 29]}) # New key
 
-
 # CHANGED STATES IN PYTHON!!
 type(dictionary)
