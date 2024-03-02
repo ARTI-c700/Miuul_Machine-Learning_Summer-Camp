@@ -271,3 +271,4 @@ dictionary.update({"ALM": [77, 29]}) # New key
 
 
 # CHANGED STATES IN PYTHON!!
+type(dictionary)
