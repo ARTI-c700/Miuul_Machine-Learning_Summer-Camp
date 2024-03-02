@@ -4,7 +4,7 @@
 ####################################################################################
 
 # Numbers: Integers
-x = 46 
+x = 46
 type(x) # Output : int
 
 # Numbers: Float
@@ -130,7 +130,7 @@ hi.replace("llo", "y") # output: 'Hey AI era'
 'Hello AI era'.split("l") # output: ['He', '', 'o AI era']
 
 # Strip method. Default: space
-"     ofofo   ".strip() # output: 'ofofo' 
+"     ofofo   ".strip() # output: 'ofofo'
 'ofofoo'.strip("o") # output: 'fof'
 
 'foo'.capitalize() # output: 'Foo'
@@ -206,7 +206,7 @@ notes.insert(2, 99) # [2, 3, 99, 4, 100, 'last']
 # Key-Value
 dictionary = {
     "REG": "Regression",
-    "LOG": "Logistic Regression", 
+    "LOG": "Logistic Regression",
     "CART": "Classification and Regression"
 }
 
@@ -269,5 +269,107 @@ dictionary.items()
 dictionary.update({"REG": 111}) # Existing key
 dictionary.update({"ALM": [77, 29]}) # New key
 
-# CHANGED STATES IN PYTHON!!
-print(type(dictionary))
+
+####################################################################################
+# Tuples
+####################################################################################
+# - Immutable
+# - Ordered
+# - Comprehensive := Can hold more than one type
+
+t = ("john", "marj", 1, 2)
+type(t)
+
+# With its ordered functionality we can access of its members like that:
+print(t[0] + " " + t[1])
+print(t[2:4])
+
+# t[0] = "changed" # Result is "TypeError"
+
+# ANOTHER WAY for changing:
+
+t = list(t)
+
+t[0] = "changed"
+t = tuple(t)
+print(t)
+
+
+####################################################################################
+# Set
+####################################################################################
+# - Mutable
+# - Unordered + Unchangeable (or unique)
+# - Comprehensive (can hold any type data in one variable)
+# - Duplicates not allowed
+
+
+# Difference between different sets
+# using : difference()
+
+set1 = set([1, 3, 5])
+set2 = set([1, 2, 3])
+
+# Ones that are in set1 and aren't in set2
+set1.difference(set2)
+# also
+set_diff1 = set1 - set2
+print(set_diff1)
+
+# Ones that are in set2 and aren't in set1
+set2.difference(set1)
+# also
+set_diff2 = set2 - set1
+print(set_diff2)
+
+
+# symmetric_difference() := values that aren't in them one another
+result1 = set1.symmetric_difference(set2)
+result2 = set2.symmetric_difference(set1)
+print(
+    result2 == result1, "\n", result1 if result1 == result2 else "null"
+)
+
+# also
+result3 = set([])
+
+for element in (set_diff1 | set_diff2):
+    result3.add(element)
+
+print("result3 is", result3)
+print(result3)
+
+
+# intersection() := which values are the same in both sets
+intersect1 = set1.intersection(set2)
+intersect2 = set2.intersection(set1)
+print(intersect1 == intersect2, "\n", intersect1 if intersect1 == intersect2 else "null")
+
+# union() := union of all elements in both sets
+set1.union(set2)
+set2.union(set1)
+
+print(
+    " or set1.intersection(set2) == set2", "\n", set1.union(set2) if set1.union(set2) == set2.union(set1) else "they are not the same"
+)
+
+
+# isdisjoint() := Do Both sets doesn't have common elements, or not
+print(set1.isdisjoint(set2))
+print(set2.isdisjoint(set1))
+
+# issubset() := the set is subset of another one
+print(set1.issubset(set2))
+print(set2.issubset(set1))
+
+# Exemplifying on another sets
+set4_1 = set([1, 2, 3, 5, 7, 9])
+set4_2 = set([3, 5, 9])
+
+print(set4_1.issubset(set4_2)) # (result) False
+print(set4_2.issubset(set4_1)) # (result) True
+
+# issuperset()
+print(set4_1.issuperset(set4_2)) # (result) True
+print(set4_2.issuperset(set4_1)) # (result) False
+
