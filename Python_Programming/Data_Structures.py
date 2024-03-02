@@ -220,11 +220,12 @@ dictionary = {
 
 dictionary["REG"][0]
 
-dictionary  = {
+dictionary = {
     "REG": 10,
     "LOG": 20,
     "CART": 30
 }
+print(type(dictionary))
 
 dictionary["LOG"]
 
@@ -239,17 +240,17 @@ dictionary["REG"] = ["YSA", 10]
 # {'REG': ['YSA', 10], 'LOG': ['MSE', 20], 'CART': ['SSE', 30]}
 
 
-dir(dict) 
-# 'clear', 
-# 'copy', 
-# 'fromkeys', 
-# 'get', 
-# 'items', 
-# 'keys', 
-# 'pop', 
-# 'popitem', 
-# 'setdefault', 
-# 'update', 
+dir(dict)
+# 'clear',
+# 'copy',
+# 'fromkeys',
+# 'get',
+# 'items',
+# 'keys',
+# 'pop',
+# 'popitem',
+# 'setdefault',
+# 'update',
 # 'values'
 
 
@@ -267,3 +268,6 @@ dictionary.items()
 
 dictionary.update({"REG": 111}) # Existing key
 dictionary.update({"ALM": [77, 29]}) # New key
+
+
+# CHANGED STATES IN PYTHON!!
