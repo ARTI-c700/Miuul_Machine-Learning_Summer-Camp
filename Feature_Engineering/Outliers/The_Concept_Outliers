@@ -1,0 +1,28 @@
+Generally:
+    Values which are out of the common shaped slope in the data
+
+Can cause some problems:
+"Suppose, we have initial relation based from dependent and independent variables.
+It has a slope which is basically showcase relation between these variables.
+If we include some additional outlying values, the relation (or connection) can change into different connection."
+
+There are different relations:
+1) Linear relations: outliers can affect more severely
+2) Tree based relation: outliers can affect in small amount
+
+HOW TO DEFINE THE OUTLIERS?
+(all are kind of relating to finding threshold)
+- Industry knowledge
+    := e.g house prediction model can be applied only strict houses which have more than 100 m2 area
+- Standard Deviation Approach
+- Z-score approach
+- Boxplot (inter quartile range - IQR) method
+
+HOW IQR WORKS?
+
+IQR - is between 25/100 and 75/100 with the following Q1 and Q3
+Suppose, we have a variable age. If we look through its values in ordered manner, 25% of the index is Q1 and Q3
+--------------------------------------------
+IQR - Robust Distribution Scale == (Q3 - Q1)
+Declaring lower limit: (Q3 + 1.5*IQR) | Higher values are outliers
+Declaring upper limit: (Q1 - 1.5*IQR) | Lower values are outliers

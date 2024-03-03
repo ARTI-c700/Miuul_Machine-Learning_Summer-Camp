@@ -1,1 +1,26 @@
+"If Your Data Is Bad, Your Machine Learning Tools Are Useless" - Thomas C. Redman
 
+- Outliers
+- Missing Values
+- Encoding
+- Feature Scaling
+- Feature Extraction
+- Feature Interactions
+
+Note: Applied Machine Learning is basically Feature Engineering. - Andrew Ng
+
+-- What is Feature Engineering
+    := Simply, it is about operations on the features
+    := Making features from raw data (this is more about feature extraction)
+
+
+Processes from Datasets to Deployment :
+
+- Datasets -> Data Retrieval -> Data Preparation {
+                                                    - Data Processing & Wrangling,
+                                                    - Feature Extraction & Engineering,
+                                                    - Feature Scaling & Selection
+                                                  } ->
+-> Modeling (With applying ML Algorithm) -> Model Evaluation & Tuning - > Deployment & Monitoring
+
+(Re-iterating till satisfactory model performance)
